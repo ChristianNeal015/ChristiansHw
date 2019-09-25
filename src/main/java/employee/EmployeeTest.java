@@ -2,14 +2,16 @@ package employee;
 
 public class EmployeeTest {
     public static void main(String[] args) {
-        int x = 10;
-        Employee employee1 = new Employee("Christian", 40.0f, 20.00);
-        employee1.calculatePay();
-        Employee employee2 = new Employee("Derrick", 35.00f,40.00);
-        employee2.calculatePay();
+        Employee employee = new Employee("Dude", 34.5f, 30.0);
+        employee.setHoursWorked(46.6f);
+        employee.getHoursWorked();
+        System.out.println(employee.getHoursWorked());
 
 
-        System.out.println(employee1);
-        System.out.println(employee2);
+//        int x = 10;
+//
+//        Employee employee1 = new Employee("Christian", 40.0f, 20.00);
+//        System.out.println(employee1.getHourlyRates());
+//        employee1.calculatePay();
     }
 }

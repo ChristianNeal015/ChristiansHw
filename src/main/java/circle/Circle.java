@@ -1,8 +1,8 @@
 package circle;
 
 public class Circle {
- public double radius;
- public float pie;
+ private double radius;
+ private float pie;
 
  public Circle(double radius, float pie){
      this.radius = radius;

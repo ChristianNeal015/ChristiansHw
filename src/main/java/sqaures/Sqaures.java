@@ -1,8 +1,8 @@
 package sqaures;
 
 public class Sqaures {
-    public double length;
-    public double width;
+    private double length;
+    private double width;
 
     public Sqaures(double length, double width) {
       this.length = length;

@@ -1,28 +1,43 @@
 package employee;
 
-public class Employee {
+public class Employee extends Person {
 
-    public String name;
-    public float hoursWorked;
-    public double hourlyRates;
+    private float hoursWorked;
+    private double hourlyRates;
+
+    public double getHourlyRates() {
+        return hourlyRates;
+    }
+
+    public float getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(float hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public void setHourlyRates(double hourlyRates){
+        this.hourlyRates = hourlyRates;
+    }
 
     public Employee(String name, float hoursWorked, double hourlyRates){
-        this.name = name;
+        super(name);
         this.hoursWorked = hoursWorked;
         this.hourlyRates = hourlyRates;
 }
     public void calculatePay(){
         System.out.println(hourlyRates * hoursWorked);
     }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", hoursWorked=" + hoursWorked +
-                ", hourlyRates=" + hourlyRates +
-                '}';
+    public double calculatePay(int maxHours){
+        if(maxHours > 40){
+            return 0.00;
+        }else {
+            return hourlyRates * hoursWorked;
+        }
     }
+
+
 
 
 }
