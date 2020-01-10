@@ -1,13 +1,9 @@
 package employee;
 
-public class Employee extends Person {
-
+public abstract class Employee extends Person implements Ipay {
     private float hoursWorked;
-    private double hourlyRates;
 
-    public double getHourlyRates() {
-        return hourlyRates;
-    }
+
 
     public float getHoursWorked() {
         return hoursWorked;
@@ -17,27 +13,26 @@ public class Employee extends Person {
         this.hoursWorked = hoursWorked;
     }
 
-    public void setHourlyRates(double hourlyRates){
-        this.hourlyRates = hourlyRates;
-    }
-
-    public Employee(String name, float hoursWorked, double hourlyRates){
+    public Employee(String name, float hoursWorked){
         super(name);
         this.hoursWorked = hoursWorked;
-        this.hourlyRates = hourlyRates;
 }
-    public void calculatePay(){
-        System.out.println(hourlyRates * hoursWorked);
-    }
-    public double calculatePay(int maxHours){
-        if(maxHours > 40){
-            return 0.00;
-        }else {
-            return hourlyRates * hoursWorked;
-        }
+    @Override
+    public String toString(){
+        return "Employee name is : " + getName();
     }
 
+    public abstract void calculatePay();
 
 
+    public void printYearlyHours(){
+        System.out.println(hoursWorked * 52);
+    }
 
 }
+
+
+
+
+
+

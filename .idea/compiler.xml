@@ -9,5 +9,8 @@
         <module name="HomeworkForTheWeekend" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HomeworkForTheWeekend" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
